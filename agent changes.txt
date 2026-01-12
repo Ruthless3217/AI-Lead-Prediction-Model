@@ -1,5 +1,0 @@
-1.change the colors to blue and white similar to Bajaj finance
-2.remove model accuracy performance graph
-3.improve the chatbot to show why 5 or n leads are top priority to approach.
-4.also show on dashboard on the priority list why the lead is on high priority or medium priority...also analyze their activity and why are their priorities are what they are. the details section should be enabled containing the above information. 
-5.remove the model performance metrics box
