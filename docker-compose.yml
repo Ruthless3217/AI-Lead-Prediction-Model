@@ -1,0 +1,43 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: nutto_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the backend directory to /app/backend to enable hot reload if uvicorn supports it (and for data persistence if simplified)
+      - ./backend:/app/backend
+      # Persist the sqlite db if it's inside backend folder (it is)
+      # Persist the sqlite db if it's inside backend folder (it is)
+
+
+    restart: always
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - REDIS_URL=redis://redis:6379
+
+  redis:
+    image: redis:alpine
+    container_name: nutto_redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nutto_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      # Browser runs on host, so it hits localhost:8000
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: always

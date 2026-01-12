@@ -1,0 +1,10 @@
+__pycache__
+.venv
+venv
+.env
+.git
+.vscode
+leads.db
+# Exclude uploads/DB from build context? Maybe not uploads if we want seed data, but usually yes.
+uploads/
+models/

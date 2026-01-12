@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+python-multipart
+requests
+faiss-cpu
+sentence-transformers
+joblib
+reportlab
+shap
+matplotlib
+huggingface_hub
+llama-cpp-python
+redis
+google-generativeai
+python-dotenv

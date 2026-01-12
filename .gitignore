@@ -1,0 +1,42 @@
+# --- Dependencies ---
+node_modules/
+.venv/
+venv/
+__pycache__/
+
+# --- Secrets & Environment ---
+.env
+*.env
+credentials.json
+
+# --- Database & Local State ---
+leads.db
+*.db
+*.sqlite3
+
+# --- Large/Raw Data ---
+# Ignore all CSV/Excel files by default to keep repo light
+*.csv
+*.xlsx
+# Exceptions: Keep specific sample data if needed for demo
+!SampleData.csv
+
+# --- Large/AI Models ---
+*.gguf
+*.bin
+
+
+# --- Build Output ---
+dist/
+build/
+
+# --- Logs & Temp Files ---
+*.log
+*_logs.txt
+temp_logs.txt
+uploads/
+
+# --- IDE Settings ---
+.vscode/
+.idea/
+*.DS_Store
