@@ -1,6 +1,5 @@
 # AI-Powered Lead Prediction Engine 🚀
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![React](https://img.shields.io/badge/react-18-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.95%2B-teal)
